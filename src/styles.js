@@ -1,7 +1,9 @@
 import { styled } from "styled-components";
+import { FcCheckmark } from "react-icons/fc";
+import { FcEmptyTrash } from "react-icons/fc";
 
 export const Container= styled.div`
-background: black;
+background: linear-gradient(90deg, #383838 0% ,#000000 75%);
 width: 100vw;
 height: 100vh;
 
@@ -14,7 +16,7 @@ background: #8052EC;
 border: none;
 border-radius: 10px;
 color: white;
-width: 100px;
+width: 130px;
 height: 30px;
 cursor: pointer;
 
@@ -30,10 +32,10 @@ background: white;
 border-radius: 7px;
 padding: 20px;
 
-width: 400px;
+width: 60%;
 display: flex;
 flex-direction: column;
-gap: 20px;
+gap: 47px;
 div{
     display: flex;
     gap: 15px;
@@ -45,4 +47,27 @@ div{
         border-radius: 4px;
     }
 }
+`
+export const Itens=styled.div`
+box-shadow: 1px 4px 10px 0px #00000033;
+border-radius: 7px;
+background: ${props=>props.isFinished ? '#E8FF8B' : '#E4E4E4'} ;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 7px;
+
+`
+export const ContainerItens =styled.ul`
+display:flex;
+flex-direction: column;
+gap: 20px;
+`
+export const Check =styled(FcCheckmark)`
+cursor: pointer;
+`
+export const Delete =styled(FcEmptyTrash)`
+cursor: pointer;
 `
